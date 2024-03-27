@@ -14,7 +14,7 @@ const TopBar = (props) => {
           />
         </div>
       </div>
-      <div className="min-h-screen z-0 p-5">{children}</div>
+      <div className=" z-0 p-5">{children}</div>
     </div>
   );
 };

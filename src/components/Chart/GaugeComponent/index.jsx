@@ -95,7 +95,7 @@ const GaugeComponent = () => {
   };
 
   return (
-    <div className="w-90">
+    <div className="w-full">
       <div className="p-5 bg-white rounded-lg">
         <ZingChart
           data={gaugeConfig}

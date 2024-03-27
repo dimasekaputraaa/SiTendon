@@ -34,7 +34,7 @@ const GaugeDua = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-60">
       <ZingChart data={gaugeConfig} />
     </div>
   );
