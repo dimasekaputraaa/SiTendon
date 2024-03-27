@@ -9,14 +9,28 @@ const BarComponent = () => {
     padding: 0,
     plot: {
       stacked: true,
-      barWidth: 10,
+      barWidth: 30,
     },
+    title: {
+      text: "My Title",
+      "font-size": "12",
+    },
+
     "scale-y": {
       // label: {
       //   /* Scale Title */ text: "title",
       // },
       // labels: ["hai"] /* Scale Labels */,
     },
+    // labels: [
+    //   // Label 1
+    //   {
+    //     text: "35%",
+    //     "font-size": "20",
+    //     // x: "60%",
+    //     //y: "-5%",
+    //   },
+    // ],
     series: [
       {
         values: [20],
