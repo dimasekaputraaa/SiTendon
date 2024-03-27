@@ -17,24 +17,25 @@ const GaugeComponent = () => {
         sequence: "ANIMATION_BY_PLOT",
         speed: "10000",
       },
+
       valueBox: {
         placement: "center",
         text: "%v", // %v adalah placeholder untuk nilai
-        fontSize: 25,
+        fontSize: 15,
         rules: [
           {
             rule: "%v >= 80",
-            text: "Excellent",
+            text: "Keruh \n Kekeruhan",
             // backgroundColor: "#30b32d",
           },
           {
             rule: "%v >= 50 && %v <= 80",
-            text: "Good",
+            text: "Bening \n Kekeruhan",
             // backgroundColor: "#FFDD89",
           },
           {
             rule: "%v <= 50",
-            text: "Poor",
+            text: "Poor \n Kekeruhan",
             // backgroundColor: "#FFA500",
           },
         ],
@@ -89,7 +90,7 @@ const GaugeComponent = () => {
       {
         values: [70], // Nilai awal
         backgroundColor: "black",
-        indicator: [10, 0, 0, 0, 0.3],
+        indicator: [0.78, 0.78, 0.78, 0.78, 0.45],
       },
     ],
   };
