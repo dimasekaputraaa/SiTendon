@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import ButtonComp from "../Button";
 const Card = (props) => {
   let shadow = props.shadow;
+  let children = props.children;
   return (
     <div
       className={`relative flex w-full max-w-[20rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 ${shadow}`}
@@ -25,9 +25,7 @@ const Card = (props) => {
         </p>
       </div>
       <div className="p-6 pt-3">
-        <ButtonComp variant="filled" color="gray" lebar="w-full">
-          Lihat Detail
-        </ButtonComp>
+        {children}
         {/* <button
           className="block w-full select-none rounded-lg bg-gray-900 py-3.5 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
           type="button"
@@ -41,6 +39,7 @@ const Card = (props) => {
 
 Card.propTypes = {
   shadow: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Card;
