@@ -96,13 +96,8 @@ const GaugeComponent = () => {
 
   return (
     <div className="w-full">
-      <div className="p-5 bg-white rounded-lg">
-        <ZingChart
-          data={gaugeConfig}
-          height="300px"
-          padding="5px"
-          className="p-5"
-        />
+      <div className="p-1 bg-white rounded-lg">
+        <ZingChart data={gaugeConfig} height="250px" className="p-5" />
       </div>
     </div>
   );

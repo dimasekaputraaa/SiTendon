@@ -4,8 +4,11 @@ const TopBar = (props) => {
   let children = props.children;
   return (
     <div className="w-screen">
-      <div className="sticky top-0 border-b border-gray-200 z-20">
-        <div className="pt-7 min-h-20 flex flex-end w-full justify-end bg-white space-x-9 items-center opacity-100 px-14">
+      <div className="sticky top-0 border-b border-gray-200 z-20 ">
+        <div className="pt-7 min-h-20 items-center flex flex-end w-full justify-end bg-white space-x-9 items-center opacity-100 px-14">
+          <h1 className="text-xl font-bold absolute left-10 inline sm:hidden">
+            SITENDON
+          </h1>
           <IoIosNotifications size={20} />
           <img
             src="/images/profil.jpeg"
@@ -14,6 +17,7 @@ const TopBar = (props) => {
           />
         </div>
       </div>
+
       <div className=" z-0 p-5">{children}</div>
     </div>
   );

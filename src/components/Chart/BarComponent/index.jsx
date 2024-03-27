@@ -5,33 +5,29 @@ import "zingchart/modules-es6/zingchart-depth.min.js";
 
 const BarComponent = () => {
   const BarConfig = {
-    type: "bar",
-
+    type: "hbar",
+    padding: 0,
     plot: {
       stacked: true,
-      barWidth: 105,
+      barWidth: 10,
     },
-    "scale-x": {
-      label: {
-        /* Scale Title */ text: "FALDI ASU",
-      },
-      labels: ["BANGSAT"] /* Scale Labels */,
+    "scale-y": {
+      // label: {
+      //   /* Scale Title */ text: "title",
+      // },
+      // labels: ["hai"] /* Scale Labels */,
     },
     series: [
       {
         values: [20],
         stack: 1,
       },
-      {
-        values: [5],
-        stack: 1,
-      },
     ],
   };
 
   return (
-    <div className="w-40">
-      <ZingChart data={BarConfig} />
+    <div className="w-60 h-px bg-red-700">
+      <ZingChart data={BarConfig} height="180"></ZingChart>
     </div>
   );
 };
