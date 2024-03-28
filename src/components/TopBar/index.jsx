@@ -1,7 +1,10 @@
 import { IoIosNotifications } from "react-icons/io";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+
 const TopBar = (props) => {
   let children = props.children;
+
   return (
     <div className="w-screen">
       <div className="sticky top-0 border-b border-gray-200 z-20 ">
@@ -10,11 +13,13 @@ const TopBar = (props) => {
             SITENDON
           </h1>
           <IoIosNotifications size={20} />
-          <img
-            src="/images/profil.jpeg"
-            alt="user"
-            className="h-10 w-10 rounded-full object-cover"
-          />
+          <Link>
+            <img
+              src="/images/profil.jpeg"
+              alt="user"
+              className="h-10 w-10 rounded-full object-cover"
+            />
+          </Link>
         </div>
       </div>
 

@@ -26,7 +26,9 @@ const SideBar = () => {
             alt="Logo"
             className="w-9 h-9 mr-6 hidden md:inline xs:hidden"
           />
-          <div className="text-indigo-700 font-bold">SITENDON</div>
+          <div className="text-black-700 font-extrabold text-bold">
+            SITENDON
+          </div>
         </div>
         <div className="px-0 flex justify-center pt-10">
           <ul className="space-y-5 ">

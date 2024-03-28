@@ -2,39 +2,23 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-//import LoginPage from "./Pages/LoginPage/index.jsx";
 import NewPage from "./Pages/NewPage";
 import MonitoringPageDetails from "./Pages/MonitoringPageDetails";
 import MonitoringPage from "./Pages/MonitoringPage/index.jsx";
-import SideBar from "./components/SideBar/index.jsx";
-import TopBar from "./components/TopBar/index.jsx";
-import InputComp from "./components/Form/Input/index.jsx";
+import LandingPage from "./Pages/LandingPage/index.jsx";
+import LoginPage from "./Pages/LoginPage/index.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <>
-        <SideBar />
-        <TopBar>
-          <NewPage />
-        </TopBar>
-      </>
-    ),
+    element: <LandingPage />,
   },
   {
     path: "/home",
-    element: (
-      <>
-        <SideBar />
-        <TopBar>
-          <NewPage />
-        </TopBar>
-      </>
-    ),
+    element: <LandingPage />,
   },
   {
     path: "/login",
-    element: <InputComp />,
+    element: <LoginPage />,
   },
   {
     path: "/form",
