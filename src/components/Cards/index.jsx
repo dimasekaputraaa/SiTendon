@@ -2,9 +2,10 @@ import PropTypes from "prop-types";
 const Card = (props) => {
   let shadow = props.shadow;
   let children = props.children;
+  let lebarMax = props.lebarMax;
   return (
     <div
-      className={`relative flex w-full max-w-[20rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 ${shadow}`}
+      className={`relative flex w-full ${lebarMax} flex-col rounded-xl bg-white bg-clip-border text-gray-700 ${shadow}`}
     >
       <div className="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
         <img
@@ -40,6 +41,7 @@ const Card = (props) => {
 Card.propTypes = {
   shadow: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired,
+  lebarMax: PropTypes.node.isRequired,
 };
 
 export default Card;

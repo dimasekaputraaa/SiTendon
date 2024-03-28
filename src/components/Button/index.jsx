@@ -7,7 +7,7 @@ const ButtonComp = (props) => {
   let lebar = props.lebar;
   return (
     <div className="flex gap-4">
-      <Button variant={variant} color={color} className={lebar}>
+      <Button variant={variant} color={color} className={`${lebar} `}>
         {children}
       </Button>
     </div>

@@ -1,6 +1,7 @@
 import { FaWpforms } from "react-icons/fa6";
 import { GoHome } from "react-icons/go";
 import { FaLaptopCode } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const SideBar = () => {
   const Menu = [
     {
@@ -8,7 +9,7 @@ const SideBar = () => {
       icon: <GoHome size={23} />,
     },
     {
-      title: "Monitorng",
+      title: "Monitoring",
       icon: <FaLaptopCode size={23} />,
     },
     {
@@ -31,13 +32,17 @@ const SideBar = () => {
           <ul className="space-y-5 ">
             <div className="mb-4 ">Menu</div>
             {Menu.map((val, index) => (
-              <li
+              <Link
                 key={index}
-                className=" hover:text-indigo-700 hover:text-bold hover:cursor-pointer flex flew-row min-h-10  justify-start  items-center gap-3 text-gray-400 "
+                to={"/" + val.title}
+                state={{ title: val.title }}
               >
-                <div className="sm:flex sm:justify-center">{val.icon}</div>
-                <div className="hidden sm:inline xs:hidden">{val.title}</div>
-              </li>
+                {" "}
+                <li className=" hover:text-indigo-700 hover:text-bold hover:cursor-pointer flex flew-row min-h-10  justify-start  items-center gap-3 text-gray-400 py-5 ">
+                  <div className="sm:flex sm:justify-center">{val.icon}</div>
+                  <div className="hidden sm:inline xs:hidden">{val.title}</div>
+                </li>
+              </Link>
             ))}
           </ul>
         </div>

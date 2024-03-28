@@ -1,28 +1,16 @@
-import Card from "../../components/Cards";
-import BarComponent from "../../components/Chart/BarComponent";
-import GaugeComponent from "../../components/Chart/GaugeComponent";
-import ButtonComp from "../../components/Button";
+import SideBar from "../../components/SideBar";
+import FlyingNav from "../../components/FlyingNav";
+import TopBar from "../../components/TopBar";
+import DetailsPage from "../../components/DetailsPage";
+
 const MonitoringPageDetails = () => {
   return (
-    <div className="w-full flex flex-row justify-center gap-5">
-      <div>
-        <Card shadow="shadow-none">
-          <ButtonComp variant="text" color="gray" lebar="w-full">
-            Lihat Detail
-          </ButtonComp>
-        </Card>
-      </div>
-      <div className="w-1/2 p-5 bg-white rounded-xl">
-        <GaugeComponent />
-        <div className="flex flex-row justify-between">
-          <div>
-            <BarComponent />
-          </div>
-          <div>
-            <BarComponent />
-          </div>
-        </div>
-      </div>
+    <div className="w-screen min-h-screen bg-[#f3f4f6]  flex flex-row">
+      <SideBar />
+      <FlyingNav />
+      <TopBar>
+        <DetailsPage />
+      </TopBar>
     </div>
   );
 };
